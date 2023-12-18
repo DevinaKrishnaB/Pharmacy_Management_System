@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-5">
+            <img src="{{d.image.url}}" height="350px" width="100%">
+        </div>
+        <div class="col-5">
+            <h3 class="text-uppercase mb-3">{{d.pname}}</h3>
+            <h5>Product Description</h5>
+            <p style="text-align:justify;line-height:2">{{d.description}} </p>
+            <h4>{{d.price}}</h4>
+            {% if d.stock <= 0 %}
+            <h4>OUT OF STOCK</h4>
+            {% else %}
+            <a href="{% url 'cart:add_to_cart' d.pname %}" class="btn btn-danger mt-3">ADD TO CART </a>
+{% endif %}
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

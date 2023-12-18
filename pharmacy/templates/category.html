@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div>
+    <img src="{% static 'images/ph2.jpg'%}" height="450px" width="100%">
+</div>
+
+<div class="container-fluid mt-4" style="margin-bottom:100px;">
+    <h1 class="text-center mb-2">MEDWORX PHARMACEUTICALS</h1>
+    <h2 class="text-center mb-1">Providing Quality Driven Pharmaceutical Products</h2>
+<!--    <p class="text-center-align:justify;line-height:2;">Pharmacy is the science and practice of discovering, producing, preparing,-->
+<!--        dispensing, reviewing and monitoring medications, aiming to ensure the safe, effective, and affordable use of medicines.-->
+<!--        A medication is a drug used to diagnose, cure, treat, or prevent disease. Drug therapy is an important part of the medical-->
+<!--        field and relies on the science of pharmacology for continual advancement and on pharmacy for appropriate management.-->
+<!--        Drugs are classified in many ways.These may include spirits, elixirs, and tinctures. Ointments are one of many semisolid preparations, which also include creams, pastes, and jellies.-->
+<!--        Solid pharmaceuticals include pills, tablets, lozenges, and suppositories.</p>-->
+
+</div>
+         <div class="row">
+         {% for i in c %}
+         <div class="col-sm-4">
+
+             <div class="card" style="width:30rem; margin-bottom:150px;">
+  <img src="{{i.image.url}}" class="card-img-top" height="250px" width="100%" alt="...">
+  <div class="card-body">
+    <h3 class="card-title text-center">{{i.cname}}</h3>
+    <p class="card-text">{{i.description}}</p>
+    <a href="{% url 'shop:allproducts' i.cname %}" style="position:relative;left:29%;" class="btn btn-primary">VIEW PRODUCTS</a>
+  </div>
+         </div>
+         </div>
+             {% endfor %}
+     </div>
+
+{% endblock %}
+
+

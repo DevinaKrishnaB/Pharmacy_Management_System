@@ -1,0 +1,53 @@
+
+body {
+    background-color: #6f42c12b;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Signika', sans-serif;
+}
+
+.navbar-dark .navbar-brand {
+    color: #c1426675;
+    font-size: 18px;
+    font-weight: bold;
+}
+.navbar-dark .navbar-brand {
+    color: #E91E63;
+}
+
+.navbar-dark .navbar-brand {
+    color:#c1426675  ;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.table
+{
+text-align:center;}
+
+.navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show>.nav-link {
+    color:#c1426675;
+}
+ .navbar-dark .navbar-nav .nav-link {
+    color:#c1426675;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.btn-outline-danger {
+    color:  #c1426675;
+    border-color:#c1426675;
+}
+.footer
+{
+height:60px;
+width:100%;
+background-color:white;
+position:fixed;
+bottom:0;
+left:0;
+font-weight:bold;
+text-align:center;
+color:#c1426675;
+}
